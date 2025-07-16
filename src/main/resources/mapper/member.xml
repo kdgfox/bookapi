@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace는 패키지 포함한 mapper(DAO interface) 이름으로 설정 한다. -->
+<mapper namespace="com.uplus.eureka.member.model.dao.MemberDao">
+
+	<select id="search"		parameterType="string"		resultType="Member">
+		select id , password, name, email, address, phone, withdraw from members where id=#{id}
+	</select>
+	
+	<update id="remove"		parameterType="string">
+		update members set withdraw='Y' where id=#{id}
+	</update>
+	
+	<update id="update"		parameterType="Member">
+		update members set name=#{name}, password = #{password},
+						email=#{email}, address= #{address},
+						phone=#{phone}
+		 where id=#{id}
+	</update>
+	
+	<insert id="regist"		parameterType="Member">
+		insert into members(id, password, name, email, address, phone )
+		values(#{id}, #{password}, #{name}, #{email}, #{address}, #{phone})
+	</insert>
+</mapper>
+
+
