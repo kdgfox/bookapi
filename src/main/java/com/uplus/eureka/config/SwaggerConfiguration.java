@@ -11,6 +11,7 @@ import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 
+//https://bookapi-y7sn.onrender.com:8080/eureka/swagger-ui/index.html
 //Swagger-UI 확인
 //http://localhost:8080/eureka/swagger-ui/index.html
 
