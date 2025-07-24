@@ -24,7 +24,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping("/**")
 //		.allowedOrigins("*")
-		.allowedOrigins("http://localhost:3000","http://localhost:3001", "http://localhost:8081")
+		.allowedOrigins("http://localhost:3000","http://localhost:3001", "http://localhost:8081","https://frontbook-91ukzjcol-donggeun-kims-projects.vercel.app")
 		.allowedMethods(HttpMethod.GET.name(), HttpMethod.POST.name(), HttpMethod.PUT.name(),
 				HttpMethod.DELETE.name(), HttpMethod.HEAD.name(), HttpMethod.OPTIONS.name(),
 				HttpMethod.PATCH.name())
